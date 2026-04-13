@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+     header {
+      background: #2193b0;
+      padding: 20px 40px;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-box input {
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: none;
+    }
+    
+
+    .hero {
+      height: 100vh;
+      background: url("oatvita.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 40px;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
+    }
+
+    section {
+      padding: 70px 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2193b0;
+    }
+
+    .center-link {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      margin: 20px 0 40px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .center-link:hover {
+      text-decoration: underline;
+    }
+
+    .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes fixes */
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .team img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #2193b0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .hero-img {
+  width: 100%;
+  max-width: 900px;      /* limite la largeur */
+  max-height: 600px;     /* limite la hauteur */
+  object-fit: cover;     /* garde un bon cadrage */
+  display: block;
+  margin: 40px auto 20px; /* centrée avec espace */
+  border-radius: 20px;   /* coins arrondis */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+</style>
+</head>
+<body>
+    <header>
+  <div class="top-bar">
+    <div class="logo">OATVITA</div>
+    <nav>
+      <a href="acueille.html">Accueil</a>
+      <a href="Nutrition_fonctionel.html">Nutrition fonctionnelle</a>
+      <a href="Sante_digestive.html">Santé digestive</a>
+    </nav>
+  </div>
+</header>
+    <section id="equipe">
+  <h2>Notre équipe</h2>
+  <div class="cards team">
+    <div class="card">
+      <img src="ca1.png">
+      <strong>Dr. ZAROUR Kenza</strong><br><br>Titulaire d’un doctorat et d’un Magistère en Microbiologie Appliquée, est enseignante-
+chercheuse expérimentée à l’Université Oran 1 Ahmed BenBella (Algérie), où elle est
+responsable de Licence Microbiologie. Spécialisée dans l’étude des bactéries lactiques, la
+production de dextrans et la caractérisation biochimique des métabolites microbiens d’intérêt
+industriel, elle possède une solide expertise en microbiologie, biochimie, biologie
+moléculaire, immunologie et rhéologie. Ses travaux ont contribué de manière significative à la
+compréhension des polysaccharides microbiens, de leurs propriétés fonctionnelles et de leurs
+applications potentielles dans l’industrie alimentaire et les procédés biotechnologiques.
+    </div>
+    <div class="card">
+      <img src="ca2.png">
+      <strong>Melle BOUACHERIA Farah</strong><br><br>Titulaire d’un diplôme Master II en Microbiologie Appliquée. Elle a réalisé son mémoire sur
+la caractérisation de l’espèce Leuconostoc mesenteroides et son potentiel d’application
+industrielle. Son travail a porté sur l’étude des propriétés biochimiques et fonctionnelles de
+cette bactérie lactique, ainsi que sur son intérêt pour des procédés biotechnologiques et
+alimentaires, démontrant sa capacité à contribuer à des applications industrielles innovantes.
+Elle a participé à des projets internationaux sur la production de dextrane de la vitamine B 2 et
+l’optimisation de matrices végétales pour la fabrication de pains et de boissons fermentées,
+consolidant ainsi son expertise en microbiologie appliquée et biotechnologie.
+    </div>
+    <div class="card">
+      <img src="ca3.png">
+      <strong>Melle BOUFATAH Lylia Yamina</strong><br><br>Titulaire d’un Master II en Microbiologie Appliquée, elle a consacré son mémoire à la
+caractérisation de l’espèce Leuconostoc mesenteroides et à son potentiel d’application
+industrielle. Ses travaux ont porté sur l’étude des propriétés biochimiques et fonctionnelles de
+cette bactérie lactique, ainsi que sur son intérêt pour des procédés biotechnologiques et
+alimentaires, mettant en évidence sa capacité à contribuer à des solutions industrielles
+innovantes.
+    </div>
+    <div class="card">
+      <img src="ca4.png">
+      <strong>Dr. Annel M Hernanadez-Alcantará</strong><br><br>Chercheuse au Centre de Recherches Biologiques CIB-CSIC (Madrid, Espagne). Sa première
+expérience en recherche a porté sur l’activité bactéricide de peptides antimicrobiens produits
+par des bactéries lactiques à l’Université Nationale Autonome du Mexique. Lors de ses études
+de Master et Doctorat à l’Université Métropolitaine Autonome, elle a étudié la croissance des
+bactéries lactiques sur des sous-produits agro-industriels, leurs propriétés probiotiques et leur
+résistance au stress. Au cours d’une bourse au CIB-CSIC, elle a acquis des compétences en
+protéomique, caractérisation de polysaccharides et biologie moléculaire. Par la suite, elle a
+contribué à des projets portant sur la production de dextrane et de riboflavine, ainsi qu’à
+l’amélioration de matrices végétales destinées à la fabrication de pains et de boissons
+fermentées, renforçant ainsi sa maîtrise de la microbiologie appliquée et des procédés
+biotechnologiques.
+    </div>
+    <div class="card">
+      <img src="ca5.png">
+      <strong>Dr. Paloma López García</strong><br><br>Directrice de Recherche au Centre de Recherches Biologiques CIB-CSIC (Madrid, Espagne),
+elle a réalisé son doctorat en 1978 sur la transformation chromosomique chez Bacillus
+subtilis, suivi d’un postdoctorat (19791984) sur la liaison et l’absorption de l’ADN chez B.
+subtilis, avec des stages en Pologne et aux USA, où elle a développé des systèmes de clonage
+plasmidique et étudié le transfert génétique chez Streptococcus pneumoniae. Depuis 1985,
+elle occupe un poste permanent au CSIC, où ses travaux ont permis de caractériser l’ADN
+polymérase I, la voie de l’acide folique et le système YycFG. En 1991, elle a créé le groupe
+de Biologie Moléculaire des bactéries Gram-positives, développant des recherches sur les
+bactéries lactiques bénéfiques, la fermentation du citrate, la production d’amines biogéniques
+et l’étude des homopolysaccharides et dextranes à visée fonctionnelle et immunomodulatrice.
+Elle a également mené des analyses protéomiques, caractérisé des mutants producteurs de
+riboflavine, développé des aliments fonctionnels enrichis en dextrane et vitamine B 2 , et conçu
+des vecteurs plasmidiques fluorescents pour l’étude des interactions bactéries-hôtes et de
+l’expression génique, contribuant ainsi à la valorisation des bactéries lactiques dans l’industrie
+alimentaire et biotechnologique.
+
+Madrid, Espagne
+    </div>
+    <div class="card">
+      <img src="ca6.png">
+      <strong>Dr. Mari Luz Mohedano</strong><br><br>Chercheuse au Centre de Recherches Biologiques CIB-CSIC (Madrid, Espagne). Ses travaux
+de recherche portent sur l’étude moléculaire (ADN, ARN, protéines, exopolysaccharides) des
+bactéries Gram-positives, pathogènes ou industrielles, visant à caractériser le transfert
+génétique, la réplication et réparation de l’ADN, le quorum sensing et les voies métaboliques
+d’intérêt biotechnologique. Sa thèse a étudié le rôle du système YycFG de Streptococcus,
+pneumoniae dans l’expression de la biosynthèse des acides gras. Dans le domaine des
+bactéries lactiques, elle a étudié la production d’amines biogènes, réalisé des analyses
+protéomiques, caractérisé des bactéries lactiques productrices d’homopolysaccharides (HoPS)
+et de vitamine B 2 , et montré leurs effets immunomodulateurs et antiviraux. Elle a également
+développé des vecteurs plasmidiques fluorescents et conçu des aliments fonctionnels, comme
+des pains sans gluten et boissons fermentées enrichis en riboflavine et HoPS.
+    </div>
+  </div>
+</section>
+</body>
+</html>

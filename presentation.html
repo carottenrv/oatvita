@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: #2193b0;
+      padding: 20px 40px;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-box input {
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: none;
+    }
+    
+
+    .hero {
+      height: 100vh;
+      background: url("oatvita.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 40px;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
+    }
+
+    section {
+      padding: 70px 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2193b0;
+    }
+
+    .center-link {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      margin: 20px 0 40px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .center-link:hover {
+      text-decoration: underline;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .team img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #2193b0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .hero-img {
+  width: 100%;
+  max-width: 900px;      /* limite la largeur */
+  max-height: 600px;     /* limite la hauteur */
+  object-fit: cover;     /* garde un bon cadrage */
+  display: block;
+  margin: 40px auto 20px; /* centrée avec espace */
+  border-radius: 20px;   /* coins arrondis */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.hero-img1 {
+  width: 100%;
+  max-width: 900px;      /* limite la largeur */
+  max-height: 1200px;     /* limite la hauteur */
+  object-fit: cover;     /* garde un bon cadrage */
+  display: block;
+  margin: 40px auto 20px; /* centrée avec espace */
+  border-radius: 20px;   /* coins arrondis */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+  </style>
+</head>
+<body>
+  <header>
+  <div class="top-bar">
+    <div class="logo">OATVITA</div>
+    <nav>
+      <a href="acueille.html">Accueil</a>
+      <a href="Nutrition_fonctionel.html">Nutrition fonctionnelle</a>
+      <a href="Sante_digestive.html">Santé digestive</a>
+    </nav>
+  </div>
+</header>
+ <video controls class="hero-img1">
+  <source src="video1.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la vidéo.
+</video>
+
+<div class="slider">
+  <div class="slides">
+    <img src="cc1.png" alt="OATVITA image 1">
+    <img src="cc2.png" alt="OATVITA image 2">
+    <img src="cc3.png" alt="OATVITA image 3">
+    <img src="cc4.png" alt="OATVITA image 3">
+    <img src="cc5.png" alt="OATVITA image 3">
+    <img src="cc6.png" alt="OATVITA image 3">
+    <img src="cc7.png" alt="OATVITA image 3">
+    <img src="cc8.png" alt="OATVITA image 3">
+    <img src="cc9.png" alt="OATVITA image 3">
+    <img src="cc10.png" alt="OATVITA image 3">
+    <img src="cc11.png" alt="OATVITA image 3">
+    <img src="cc12.png" alt="OATVITA image 3">
+    <img src="cc13.png" alt="OATVITA image 3">
+    <img src="cc14.png" alt="OATVITA image 3">
+    <img src="cc15.png" alt="OATVITA image 3">
+  </div>
+
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+</div>
+<script>
+  let index = 0;
+  const slides = document.querySelector(".slides");
+  const totalSlides = slides.children.length;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+</body>
+</html>
