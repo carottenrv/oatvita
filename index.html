@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OATVITA – Boisson fonctionnelle</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 20px 40px;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-box input {
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: none;
+    }
+    
+
+    .hero {
+      height: 100vh;
+      background: url("oatvita.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 40px;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
+    }
+
+    section {
+      padding: 70px 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2193b0;
+    }
+
+    .center-link {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      margin: 20px 0 40px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .center-link:hover {
+      text-decoration: underline;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .team img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #2193b0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .hero-img {
+  width: 100%;
+  max-width: 900px;      /* limite la largeur */
+  max-height: 600px;     /* limite la hauteur */
+  object-fit: cover;     /* garde un bon cadrage */
+  display: block;
+  margin: 40px auto 20px; /* centrée avec espace */
+  border-radius: 20px;   /* coins arrondis */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+ .hero-img1 {
+  width: 100%;
+  max-width: 900px;      /* limite la largeur */
+  max-height: 1200px;     /* limite la hauteur */
+  object-fit: cover;     /* garde un bon cadrage */
+  display: block;
+  margin: 40px auto 20px; /* centrée avec espace */
+  border-radius: 20px;   /* coins arrondis */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="logo">OATVITA</div>
+    <nav>
+      <a href="acueille.html">Accueil</a>
+      <a href="Nutrition_fonctionel.html">Nutrition fonctionnelle</a>
+      <a href="Sante_digestive.html">Santé digestive</a>
+      <a href="presentation.html">presentation</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="search-box">
+      <input type="search" placeholder="Rechercher...">
+    </div>
+  </div>
+</header>
+
+<section class="hero"></section>
+
+<section>
+  <h2>Objectif</h2>
+  <p>
+    <i>OATVITA+</i> est une boisson fonctionnelle innovante à base d’avoine fermentée,
+    développée à partir d’un ferment algérien unique. Elle contribue au bien-être
+    digestif et nutritionnel.
+  </p>
+
+  <h2>Découvrez <i>OATVITA+</i></h2>
+
+  <video controls class="hero-img1">
+  <source src="video1.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la vidéo.
+</video>
+<div class="slider">
+  <div class="slides">
+    <img src="c1.png" alt="OATVITA image 1">
+    <img src="c2.png" alt="OATVITA image 2">
+    <img src="c3.png" alt="OATVITA image 3">
+    <img src="c4.png" alt="OATVITA image 3">
+    <img src="c5.png" alt="OATVITA image 3">
+    <img src="c6.png" alt="OATVITA image 3">
+    <img src="c7.png" alt="OATVITA image 3">
+    <img src="c8.png" alt="OATVITA image 3">
+    <img src="c9.png" alt="OATVITA image 3">
+    <img src="c10.png" alt="OATVITA image 3">
+    <img src="c11.png" alt="OATVITA image 3">
+    <img src="c12.png" alt="OATVITA image 3">
+    <img src="c13.png" alt="OATVITA image 3">
+  </div>
+
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+</div>
+<script>
+  let index = 0;
+  const slides = document.querySelector(".slides");
+  const totalSlides = slides.children.length;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+</script>
+
+  <img src="photo2.jpg" width="100%" class="hero-img">
+  <a href="Nutrition_fonctionel.html" class="center-link">Découvrir la nutrition fonctionnelle</a>
+
+  <img src="photo3.jpg" width="100%" class="hero-img">
+  <a href="Sante_digestive.html" class="center-link">Découvrir la santé digestive</a>
+
+  <div class="cards">
+    <div class="card">🥛<strong><br>100% naturel</strong></div>
+    <div class="card">💪<strong><br>Bien-être digestif</strong></div>
+    <div class="card">🌿<strong><br>Fermentation naturelle</strong></div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="cards">
+    <div class="card">
+      📧 zarour.kz@gmail.com<br><br>
+      📞 002135 59 26 40 16<br><br>
+      <strong>Notre localisation :</strong><br>Laboratoire de Microbiologie Appliquée (LMA)
+Université Oran1 Ahmed Ben Bella
+ES Senia, Oran, Algérie<br><br>
+
+<iframe
+  src="https://www.google.com/maps?q=J9PM+WXG+University+of+Oran+1+Es-Senia&output=embed"
+  width="100%"
+  height="250"
+  style="border:0; border-radius:15px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 OATVITA – Tous droits réservés
+</footer>
+
+</body>
+</html>
