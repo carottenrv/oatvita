@@ -281,9 +281,27 @@
 </div>
 <script>
   let index = 0;
+  let index2=0;
   const slides = document.querySelector(".slides");
   const totalSlides = slides.children.length;
-
+  const videos = [
+  "part_00.mp4",
+  "part_01.mp4",
+  "part_02.mp4",
+  "part_03.mp4"
+];
+ const player =document.querySelector("video");
+player.addEventListener("ended",function()
+{
+  index2++;
+  if(index2 <videos.length)
+  player.src = videos[index2];
+ else
+ {
+  index2 =0
+  player.src = videos[index2];
+ } 
+})
   function showSlide(i) {
     index = (i + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${index * 100}%)`;
@@ -339,6 +357,5 @@ ES Senia, Oran, Algérie<br><br>
 <footer>
   © 2026 OATVITA – Tous droits réservés
 </footer>
-
 </body>
 </html>
